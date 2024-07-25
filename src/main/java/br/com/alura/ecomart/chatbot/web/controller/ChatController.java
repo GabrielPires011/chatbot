@@ -31,6 +31,7 @@ public class ChatController {
 
     @GetMapping("limpar")
     public String limparConversa() {
+        chatbotService.limparHistorico();
         return PAGINA_CHAT;
     }
 

@@ -89,4 +89,10 @@ public class OpenAIClient {
         return mensagens;
     }
 
+    public void apagarThread() {
+        if (this.threadId != null) {
+            service.deleteThread(this.threadId);
+            this.threadId = null;
+        }
+    }
 }
